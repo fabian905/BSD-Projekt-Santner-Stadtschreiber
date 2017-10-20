@@ -14,3 +14,5 @@ C:\Users\Fabian\Documents\MEGA\Schule\5AHIFS\BSD\Feriendorf\Feriendorf\obj\Debug
 C:\Users\Fabian\Documents\MEGA\Schule\5AHIFS\BSD\Feriendorf\Feriendorf\obj\Debug\Feriendorf.pdb
 C:\Users\Fabian\Documents\MEGA\Schule\5AHIFS\BSD\Feriendorf\Feriendorf\obj\Debug\Overview.g.cs
 C:\Users\Fabian\Documents\MEGA\Schule\5AHIFS\BSD\Feriendorf\Feriendorf\obj\Debug\Overview.baml
+C:\Users\Fabian\Documents\MEGA\Schule\5AHIFS\BSD\Feriendorf\Feriendorf\obj\Debug\EinzelansichtDefekt.g.cs
+C:\Users\Fabian\Documents\MEGA\Schule\5AHIFS\BSD\Feriendorf\Feriendorf\obj\Debug\EinzelansichtDefekt.baml

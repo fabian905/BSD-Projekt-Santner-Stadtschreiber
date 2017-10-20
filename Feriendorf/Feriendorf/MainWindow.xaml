@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="295.073" Width="306.569">
     <Grid>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="97,17,0,0" VerticalAlignment="Top" Width="171"/>
+        <ComboBox x:Name="cbFeriendorfAuswahl" HorizontalAlignment="Left" Margin="97,17,0,0" VerticalAlignment="Top" Width="171"/>
         <Label x:Name="label" Content="Feriendorf:" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top"/>
         <Button x:Name="bttnLogin" Content="Login" HorizontalAlignment="Left" Margin="10,192,0,0" VerticalAlignment="Top" Width="131" Height="30" Click="bttnLogin_Click"/>
         <Button x:Name="bttnClose" Content="Close" HorizontalAlignment="Left" Margin="146,192,0,0" VerticalAlignment="Top" Width="122" Height="30" Click="bttnClose_Click"/>
