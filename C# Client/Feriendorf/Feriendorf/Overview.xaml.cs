@@ -55,17 +55,24 @@ namespace Feriendorf
 
         private void getAndDrawPoints(string feriendorf)
         {
-            lbAlleDefekte.Items.Clear();
-            PointCollection points = new PointCollection();
-            OleDbDataReader r = db.ExecuteCommand("select bezeichnung from schaden where sid in (select sid from vorhanden where hid in (select hid from haus where fid like '"+feriendorf+"'))");
-
-            while (r.Read())
+            try
             {
-                //points = new pointcollection();
-                //points.add(new point(int.parse(r[0].tostring()) * 2, int.parse(r[1].tostring()) * 2));
-                //addtocanvas(points);
+                lbAlleDefekte.Items.Clear();
+                PointCollection points = new PointCollection();
+                OleDbDataReader r = db.ExecuteCommand("select bezeichnung from schaden where sid in (select sid from vorhanden where hid in (select hid from haus where fid like '" + feriendorf + "'))");
 
-                lbAlleDefekte.Items.Add(r[0].ToString());
+                while (r.Read())
+                {
+                    //points = new pointcollection();
+                    //points.add(new point(int.parse(r[0].tostring()) * 2, int.parse(r[1].tostring()) * 2));
+                    //addtocanvas(points);
+
+                    lbAlleDefekte.Items.Add(r[0].ToString());
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
