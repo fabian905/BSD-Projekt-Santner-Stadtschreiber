@@ -1,0 +1,7 @@
+- Datenmodell überarbeitet (gemeinsam)
+
+Santner:
+- Creates, inserts und selects für neues Datenmodell
+
+Stadtschreiber:
+- C# Client erweitert (u.a. GUI verbesserungen)
