@@ -1,0 +1,10 @@
+C#-Client: 
+- Exceptionhandling, 
+- Häuser auf WPF Canvas darstellbar (angefangen)
+- erweitert (bei Klick auf einzelnen Schaden in Schadensliste werden Details angezeigt
+
+Datenbank:
+- Tabellen um Spatialfunktionalität erweitert
+- Koordinaten für Häuser festgelegt
+- Häuser mit Koordinaten in Tabelle eingefügt
+- Selects für C# Client erweitert und an neuen Tabellenaufbau angepasst
