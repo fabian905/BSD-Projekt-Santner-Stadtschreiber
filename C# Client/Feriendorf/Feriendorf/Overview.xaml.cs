@@ -21,7 +21,7 @@ namespace Feriendorf
     public partial class Overview : Window
     {
         Database db = new Database();
-
+        Schaden s;
         public Overview(string feriendorf)
         {
             InitializeComponent();
@@ -30,19 +30,51 @@ namespace Feriendorf
             if (s != "CONNECTED!")
                 MessageBox.Show("Error while connecting! " + s);
 
-           // getAndDrawPolygons();
+            fillLbNeu(feriendorf);
+            fillLbInArbeit(feriendorf);
+            //getAndDrawPolygons();
             getAndDrawPoints(feriendorf);
 
             db.Close();
         }
 
-        private void getAndDrawPolygons()
+        private void fillLbInArbeit(string feriendorf)
+        {
+            try
+            {
+                OleDbDataReader rInArbeit = db.ExecuteCommand("select * from schaden where status LIKE 'inarbeit' AND hid in (select hid from haus where fid like '" + feriendorf + "')");
+
+                while (rInArbeit.Read())
+                {
+                    lbInArbeit.Items.Add(String.Format(rInArbeit[0].ToString() + " " + rInArbeit[1].ToString()));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void fillLbNeu(string feriendorf)
         {
             
-            canvas.Children.Clear();
+            try
+            {
+                OleDbDataReader rNeu = db.ExecuteCommand("select * from schaden where status LIKE 'offen' AND hid in (select hid from haus where fid like '" + feriendorf + "')");
+                while (rNeu.Read())
+                {
+                    lbAlleDefekte.Items.Add(String.Format(rNeu[0].ToString() + " " + rNeu[1].ToString()));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
+        private void getAndDrawPolygons()
+        {        
             OleDbDataReader r = db.ExecuteCommand("SELECT t.X, t.Y, t.id FROM polygon p, TABLE(SDO_UTIL.GETVERTICES(p.shape)) t ORDER BY t.id");
-
             canvas.Children.Clear();
             PointCollection points = null;
             points = new PointCollection();
@@ -57,18 +89,15 @@ namespace Feriendorf
         {
             try
             {
-                lbAlleDefekte.Items.Clear();
                 PointCollection points = new PointCollection();
-                OleDbDataReader r = db.ExecuteCommand("select bezeichnung from schaden where sid in (select sid from vorhanden where hid in (select hid from haus where fid like '" + feriendorf + "'))");
+                OleDbDataReader r = db.ExecuteCommand("SELECT t.X, t.Y, t.id FROM haus p, TABLE(SDO_UTIL.GETVERTICES(p.shape)) t ORDER BY t.id");
 
                 while (r.Read())
                 {
-                    //points = new pointcollection();
-                    //points.add(new point(int.parse(r[0].tostring()) * 2, int.parse(r[1].tostring()) * 2));
-                    //addtocanvas(points);
-
-                    lbAlleDefekte.Items.Add(r[0].ToString());
-                }
+                    points = new PointCollection();
+                    points.Add(new Point(int.Parse(r[0].ToString()) * 2, int.Parse(r[1].ToString()) * 2));
+                    addToCanvas(points);
+                }               
             }
             catch(Exception ex)
             {
@@ -103,9 +132,24 @@ namespace Feriendorf
 
         private void lbAlleDefekte_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            EinzelansichtDefekt ed = new EinzelansichtDefekt();
-            ed.Show();
+            string x = lbAlleDefekte.SelectedValue.ToString();
+            string[] y = x.Split(' ');
+            MessageBox.Show(y[0]);
 
+            OleDbDataReader r = db.ExecuteCommand("select * from schaden where sid LIKE " + y[0]);
+            s = new Schaden(r[0].ToString(), r[1].ToString(), r[2].ToString(),r[3].ToString(),r[4].ToString(), r[5].ToString());
+
+            EinzelansichtDefekt ed = new EinzelansichtDefekt(s);
+            ed.Show();
+        }
+
+        private void lbInArbeit_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+            //OleDbDataReader rNeu = db.ExecuteCommand("select  from schaden where status LIKE 'offen' AND hid in (select hid from haus where fid like '" + feriendorf + "')");
+
+            //EinzelansichtDefekt ed = new EinzelansichtDefekt(lbInArbeit.SelectedValue.ToString());
+            //ed.Show();
         }
     }
 }

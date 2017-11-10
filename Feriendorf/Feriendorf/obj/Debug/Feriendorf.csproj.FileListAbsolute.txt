@@ -16,3 +16,6 @@ C:\Users\Fabian\Documents\MEGA\Schule\5AHIFS\BSD\Feriendorf\Feriendorf\obj\Debug
 C:\Users\Fabian\Documents\MEGA\Schule\5AHIFS\BSD\Feriendorf\Feriendorf\obj\Debug\Overview.baml
 C:\Users\Fabian\Documents\MEGA\Schule\5AHIFS\BSD\Feriendorf\Feriendorf\obj\Debug\EinzelansichtDefekt.g.cs
 C:\Users\Fabian\Documents\MEGA\Schule\5AHIFS\BSD\Feriendorf\Feriendorf\obj\Debug\EinzelansichtDefekt.baml
+C:\Users\Fabian\Documents\MEGA\Schule\5AHIFS\BSD\BSD-Projekt-Santner-Stadtschreiber\Feriendorf\Feriendorf\bin\Debug\Feriendorf.exe.config
+C:\Users\Fabian\Documents\MEGA\Schule\5AHIFS\BSD\BSD-Projekt-Santner-Stadtschreiber\Feriendorf\Feriendorf\obj\Debug\Feriendorf.exe
+C:\Users\Fabian\Documents\MEGA\Schule\5AHIFS\BSD\BSD-Projekt-Santner-Stadtschreiber\Feriendorf\Feriendorf\obj\Debug\Feriendorf.pdb

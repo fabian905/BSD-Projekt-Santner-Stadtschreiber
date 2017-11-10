@@ -42,10 +42,18 @@ namespace Feriendorf
         }
 
         private void bttnLogin_Click(object sender, RoutedEventArgs e)
-        {
-            Overview o = new Overview(cbFeriendorfAuswahl.SelectedValue.ToString());
-            o.Show();
-            this.Close();
+        {   
+            try
+            {
+                Overview o = new Overview(cbFeriendorfAuswahl.SelectedValue.ToString());
+                o.Show();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void bttnClose_Click(object sender, RoutedEventArgs e)

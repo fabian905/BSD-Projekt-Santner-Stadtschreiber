@@ -8,12 +8,12 @@
         Title="EinzelansichtDefekt" Height="324.088" Width="321.898">
     <Grid>
         <Label x:Name="label" Content="Beschreibung:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="96"/>
-        <Label x:Name="label1" Content="Ort:" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.414,0.672"/>
+        <Label x:Name="label1" Content="Haus: " HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.414,0.672"/>
         <TextBox x:Name="tbOrt" HorizontalAlignment="Left" Height="23" Margin="10,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="277" IsEnabled="False"/>
         <TextBox x:Name="tbBeschreibung" HorizontalAlignment="Left" Height="74" Margin="10,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="277" IsEnabled="False"/>
         <Button x:Name="bttnBeheben" Content="Beheben" HorizontalAlignment="Left" Margin="151,195,0,0" VerticalAlignment="Top" Width="136" Height="31" Click="bttnBeheben_Click"/>
         <Button x:Name="btnSchließen" Content="Schließen" HorizontalAlignment="Left" Margin="10,231,0,0" VerticalAlignment="Top" Width="277" Height="30" Click="btnSchließen_Click"/>
-        <Button x:Name="bttn_InArbeit" Content="Akzeptieren" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top" Width="136" Height="31"/>
+        <Button x:Name="bttn_InArbeit" Content="Akzeptieren" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top" Width="136" Height="31" Click="bttn_InArbeit_Click"/>
 
     </Grid>
 </Window>

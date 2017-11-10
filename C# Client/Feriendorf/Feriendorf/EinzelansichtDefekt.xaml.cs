@@ -21,31 +21,26 @@ namespace Feriendorf
     public partial class EinzelansichtDefekt : Window
     {
         Database db = new Database();
-        public EinzelansichtDefekt()
+        public EinzelansichtDefekt(Schaden schaden)
         {
             InitializeComponent();
 
-           
+         
             string s = db.Connect();
             if (s != "CONNECTED!")
                 MessageBox.Show("Error while connecting! " + s);
 
-            init();
+            init(schaden);
             db.Close();
             
         }
 
-        private void init()
+        private void init(Schaden s)
         {
             try
             {
-                OleDbDataReader r = db.ExecuteCommand("");
-                //while (r.Read())
-                //{
-                tbBeschreibung.Text = r[0].ToString();
-                tbOrt.Text = r[1].ToString();
-                //}
-
+                tbBeschreibung.Text = s.Bezeichnung;
+                tbOrt.Text = s.HausID;
             }
             catch (Exception ex)
             {
@@ -56,9 +51,37 @@ namespace Feriendorf
 
         private void bttnBeheben_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                //OleDbDataReader r = db.ExecuteCommand("");
+                //while (r.Read())
+                //{
+                //    
+                //}
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+        private void bttn_InArbeit_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                
+                //OleDbDataReader r = db.ExecuteCommand("");
+                //while (r.Read())
+                //{
+                //    
+                //}
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void btnSchließen_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
