@@ -7,12 +7,16 @@
         mc:Ignorable="d"
         Title="Overview" Height="550.2" Width="981">
     <Grid Height="562" Margin="0,0,0.4,-0.4" VerticalAlignment="Top">
-        <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="401" Margin="10,73,0,0" VerticalAlignment="Top" Width="551" Background="#FFFFF0F0"/>
-        <ListBox x:Name="lbAlleDefekte" HorizontalAlignment="Left" Height="360" Margin="583,73,0,0" VerticalAlignment="Top" Width="163" MouseDoubleClick="lbAlleDefekte_MouseDoubleClick"/>
+        <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="401" Margin="10,73,0,0" VerticalAlignment="Top" Width="551" Background="#FFFFF0F0">
+            <Canvas.LayoutTransform>
+                <ScaleTransform ScaleX="1" ScaleY="-1" CenterX=".5" CenterY=".5" />
+            </Canvas.LayoutTransform>
+        </Canvas>
+        <ListBox x:Name="lbAlleDefekte" HorizontalAlignment="Left" Height="360" Margin="583,73,0,0" VerticalAlignment="Top" Width="163" MouseDoubleClick="lbAlleDefekte_MouseDoubleClick" SelectionChanged="lbAlleDefekte_SelectionChanged"/>
         <Button x:Name="bttnClose" Content="Logout" HorizontalAlignment="Left" Margin="583,451,0,0" VerticalAlignment="Top" Width="339" Height="23" Click="bttnClose_Click"/>
         <Label x:Name="label" Content="Neue Schäden:" HorizontalAlignment="Left" Margin="583,36,0,0" VerticalAlignment="Top" Width="163" FontWeight="Bold" FontSize="18"/>
         <Label x:Name="label1" Content="Plan" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="551"/>
-        <ListBox x:Name="lbInArbeit" HorizontalAlignment="Left" Height="360" Margin="759,73,0,0" VerticalAlignment="Top" Width="163" MouseDoubleClick="lbInArbeit_MouseDoubleClick"/>
+        <ListBox x:Name="lbInArbeit" HorizontalAlignment="Left" Height="360" Margin="759,73,0,0" VerticalAlignment="Top" Width="163" MouseDoubleClick="lbInArbeit_MouseDoubleClick" SelectionChanged="lbInArbeit_SelectionChanged"/>
         <Label x:Name="label2" Content="In Arbeit:" HorizontalAlignment="Left" Margin="759,36,0,0" VerticalAlignment="Top" Width="177" FontSize="18" FontWeight="Bold"/>
         
     </Grid>

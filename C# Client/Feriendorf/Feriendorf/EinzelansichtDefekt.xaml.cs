@@ -21,44 +21,46 @@ namespace Feriendorf
     public partial class EinzelansichtDefekt : Window
     {
         Database db = new Database();
+        Schaden sch;
         public EinzelansichtDefekt(Schaden schaden)
         {
             InitializeComponent();
 
-         
+            sch = schaden;
             string s = db.Connect();
             if (s != "CONNECTED!")
                 MessageBox.Show("Error while connecting! " + s);
 
-            init(schaden);
+            init();
             db.Close();
             
         }
 
-        private void init(Schaden s)
+        private void init()
         {
             try
             {
-                tbBeschreibung.Text = s.Bezeichnung;
-                tbOrt.Text = s.HausID;
+                OleDbDataReader r = db.ExecuteCommand("select bezeichnung from Haus where hid like "+ sch.HausID);
+                while (r.Read())
+                {
+                    tbOrt.Text = r[0].ToString();
+                }
+                tbBeschreibung.Text = sch.Bezeichnung;              
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
         private void bttnBeheben_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                //OleDbDataReader r = db.ExecuteCommand("");
-                //while (r.Read())
-                //{
-                //    
-                //}
-
+                db.Connect();
+                OleDbDataReader r = db.ExecuteCommand("update schaden set status = 'behoben' where sid like " + sch.SchadenID);
+                db.Close();
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -69,17 +71,15 @@ namespace Feriendorf
         {
             try
             {
-                
-                //OleDbDataReader r = db.ExecuteCommand("");
-                //while (r.Read())
-                //{
-                //    
-                //}
-
+                db.Connect();
+                OleDbDataReader r = db.ExecuteCommand("update schaden set status = 'inarbeit' where sid like "+ sch.SchadenID);
+                db.Close();
+                this.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                db.Close();
             }
         }
         private void btnSchließen_Click(object sender, RoutedEventArgs e)
