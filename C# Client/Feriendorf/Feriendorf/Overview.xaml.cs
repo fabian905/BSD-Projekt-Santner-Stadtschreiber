@@ -27,6 +27,7 @@ namespace Feriendorf
         bool track;
         ThreadStart ts;
         Thread t;
+        bool b = false;
 
         public Overview(string feriendorf)
         {
@@ -59,16 +60,18 @@ namespace Feriendorf
             fillLbNeu(feriend);
             fillLbInArbeit(feriend);
             
-
             db.Close();
         }
         private void threadDrawing()
         {
             while (track)
             {
-                Dispatcher.Invoke(fillListBoxes);
-                Thread.Sleep(1000);
-                               
+                if (b != false)
+                {
+                    Dispatcher.Invoke(fillListBoxes);
+                    Thread.Sleep(1000);
+                }
+
             }
         }
         private void fillLbInArbeit(string feriendorf)
@@ -200,53 +203,89 @@ namespace Feriendorf
 
         private void lbAlleDefekte_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            db.Connect();
-            string x = lbAlleDefekte.SelectedValue.ToString();
-            string[] y = x.Split(' ');
-
-            OleDbDataReader r = db.ExecuteCommand("select * from schaden where sid LIKE " + y[0]);
-            while (r.Read())
+            try
             {
-                s = new Schaden(r[0].ToString(), r[1].ToString(), r[2].ToString(), r[3].ToString(), r[4].ToString(), r[5].ToString());
-            }
+                db.Connect();
+                string x = lbAlleDefekte.SelectedValue.ToString();
+                string[] y = x.Split(' ');
 
-            EinzelansichtDefekt ed = new EinzelansichtDefekt(s);
-            ed.Show();
-            db.Close();
+                OleDbDataReader r = db.ExecuteCommand("select * from schaden where sid LIKE " + y[0]);
+                while (r.Read())
+                {
+                    s = new Schaden(r[0].ToString(), r[1].ToString(), r[2].ToString(), r[3].ToString(), r[4].ToString(), r[5].ToString());
+                }
+
+                EinzelansichtDefekt ed = new EinzelansichtDefekt(s);
+                ed.Show();
+                db.Close();
+                lbAlleDefekte.UnselectAll();
+                b = true;
+            }
+            catch
+            {
+                db.Close();
+                lbAlleDefekte.UnselectAll();
+                b = true;
+            }
         }
 
         private void lbInArbeit_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            db.Connect();
-            string x = lbInArbeit.SelectedValue.ToString();
-            string[] y = x.Split(' ');
-
-            OleDbDataReader r = db.ExecuteCommand("select * from schaden where sid LIKE " + y[0]);
-            while (r.Read())
+            try
             {
-                s = new Schaden(r[0].ToString(), r[1].ToString(), r[2].ToString(), r[3].ToString(), r[4].ToString(), r[5].ToString());
-            }
+                db.Connect();
+                string x = lbInArbeit.SelectedValue.ToString();
+                string[] y = x.Split(' ');
 
-            EinzelansichtDefekt ed = new EinzelansichtDefekt(s);
-            ed.Show();
-            db.Close();
+                OleDbDataReader r = db.ExecuteCommand("select * from schaden where sid LIKE " + y[0]);
+                while (r.Read())
+                {
+                    s = new Schaden(r[0].ToString(), r[1].ToString(), r[2].ToString(), r[3].ToString(), r[4].ToString(), r[5].ToString());
+                }
+
+                EinzelansichtDefekt ed = new EinzelansichtDefekt(s);
+                ed.Show();
+                db.Close();
+                lbInArbeit.UnselectAll();
+                b = true;
+            }
+            catch
+            {
+                db.Close();
+                lbAlleDefekte.UnselectAll();
+                b = true;
+            }
         }
 
         private void lbAlleDefekte_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            db.Connect();
-            string x = lbAlleDefekte.SelectedItem.ToString();
-            string[] y = x.Split(' ');
-            getAndDrawPoints(feriend);
-            getAndDrawPoints(feriend, y[0]);
+            try
+            {
+                lbInArbeit.UnselectAll();
+                b = false;
+                db.Connect();
 
-            db.Close();
+                string x = lbAlleDefekte.SelectedItem.ToString();
+                string[] y = x.Split(' ');
+                getAndDrawPoints(feriend);
+                getAndDrawPoints(feriend, y[0]);
+
+                db.Close();
+            }
+            catch (Exception ex)
+            {
+                lbAlleDefekte.UnselectAll();
+                db.Close();
+            }
+          
         }
 
         private void lbInArbeit_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
             {
+                lbAlleDefekte.UnselectAll();
+                b = false;
                 db.Connect();
 
                 string x = lbInArbeit.SelectedItem.ToString();
@@ -258,8 +297,16 @@ namespace Feriendorf
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                db.Close();
+                lbInArbeit.UnselectAll();
+
             }
+        }
+
+        private void bttnAlleSchaeden_Click(object sender, RoutedEventArgs e)
+        {
+            AlleSchaeden a = new AlleSchaeden();
+            a.Show();
         }
     }
 }

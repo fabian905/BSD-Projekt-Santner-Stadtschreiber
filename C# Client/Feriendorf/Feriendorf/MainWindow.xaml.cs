@@ -49,9 +49,9 @@ namespace Feriendorf
                 o.Show();
                 this.Close();
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Kein Dorf ausgewählt!");
             }
 
         }

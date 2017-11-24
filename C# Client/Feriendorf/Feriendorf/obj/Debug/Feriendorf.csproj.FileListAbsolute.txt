@@ -34,3 +34,5 @@ C:\Users\Fabian\Documents\MEGA\Schule\5AHIFS\BSD\BSD-Projekt-Santner-Stadtschrei
 C:\Users\Fabian\Documents\MEGA\Schule\5AHIFS\BSD\BSD-Projekt-Santner-Stadtschreiber\C# Client\Feriendorf\Feriendorf\obj\Debug\Feriendorf.g.resources
 C:\Users\Fabian\Documents\MEGA\Schule\5AHIFS\BSD\BSD-Projekt-Santner-Stadtschreiber\C# Client\Feriendorf\Feriendorf\obj\Debug\Feriendorf.Properties.Resources.resources
 C:\Users\Fabian\Documents\MEGA\Schule\5AHIFS\BSD\BSD-Projekt-Santner-Stadtschreiber\C# Client\Feriendorf\Feriendorf\obj\Debug\Feriendorf.csproj.GenerateResource.Cache
+C:\Users\Fabian\Documents\MEGA\Schule\5AHIFS\BSD\BSD-Projekt-Santner-Stadtschreiber\C# Client\Feriendorf\Feriendorf\obj\Debug\AlleSchaeden.g.cs
+C:\Users\Fabian\Documents\MEGA\Schule\5AHIFS\BSD\BSD-Projekt-Santner-Stadtschreiber\C# Client\Feriendorf\Feriendorf\obj\Debug\AlleSchaeden.baml

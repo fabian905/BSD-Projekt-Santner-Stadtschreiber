@@ -31,6 +31,24 @@ namespace Feriendorf
             if (s != "CONNECTED!")
                 MessageBox.Show("Error while connecting! " + s);
 
+
+
+            if (sch.Status == "inarbeit")
+            {
+                bttn_InArbeit.IsEnabled = false;
+                cbTechniker.IsEnabled = true;
+                tbMaterialaufwand.IsEnabled = true;
+                tbSonstigeInfos.IsEnabled = true;
+            }
+            else
+            {
+                bttnBeheben.IsEnabled = false;
+                
+                cbTechniker.IsEnabled = false;
+                tbMaterialaufwand.IsEnabled = false;
+                tbSonstigeInfos.IsEnabled = false;
+            }
+
             init();
             db.Close();
             
@@ -41,11 +59,19 @@ namespace Feriendorf
             try
             {
                 OleDbDataReader r = db.ExecuteCommand("select bezeichnung from Haus where hid like "+ sch.HausID);
+
                 while (r.Read())
                 {
                     tbOrt.Text = r[0].ToString();
                 }
-                tbBeschreibung.Text = sch.Bezeichnung;              
+                tbBeschreibung.Text = sch.Bezeichnung;
+
+                r = db.ExecuteCommand("select vorname, nachname from mitarbeiter where beruf = 'techniker'");
+
+                while (r.Read())
+                {
+                    cbTechniker.Items.Add(String.Format(r[0].ToString()+" "+r[1].ToString()));
+                }
             }
             catch (Exception ex)
             {
@@ -58,12 +84,15 @@ namespace Feriendorf
             try
             {
                 db.Connect();
-                OleDbDataReader r = db.ExecuteCommand("update schaden set status = 'behoben' where sid like " + sch.SchadenID);
+                db.ExecuteCommand("update schaden set status = 'behoben' where sid like " + sch.SchadenID);
+               // db.ExecuteCommand("insert into reparatur values (" + IDGenerator.nextId + ", '" + tbMaterialaufwand.Text + "', '"+DateTime.Now+"', '"+tbSonstigeInfos.Text+"', '" + cbTechniker.SelectedItem.ToString()+"')");
+
                 db.Close();
                 this.Close();
             }
             catch (Exception ex)
             {
+                db.Close();
                 MessageBox.Show(ex.Message);
             }
         }
@@ -72,7 +101,8 @@ namespace Feriendorf
             try
             {
                 db.Connect();
-                OleDbDataReader r = db.ExecuteCommand("update schaden set status = 'inarbeit' where sid like "+ sch.SchadenID);
+                db.ExecuteCommand("update schaden set status = 'inarbeit' where sid like "+ sch.SchadenID);
+
                 db.Close();
                 this.Close();
             }
