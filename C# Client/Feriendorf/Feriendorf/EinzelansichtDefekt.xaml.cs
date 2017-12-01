@@ -110,14 +110,16 @@ namespace Feriendorf
                 }
                 //MessageBox.Show(mid.ToString());
                 int matauf = Convert.ToInt32(tbMaterialaufwand.Text);
-           
-                //db.ExecuteCommand("insert into reparatur values (3, 12, '1/1/2041', 'sonstiges', 1)");
-                db.ExecuteCommand("insert into reparatur values (" + id + ", " + matauf + ", '1/1/2345', '" + tbSonstigeInfos.Text + "', " + mid + ")");
+
+                string date = string.Format(DateTime.Now.Day.ToString()+"."+ DateTime.Now.Month.ToString()+"."+DateTime.Now.Year.ToString());
+
+                db.ExecuteCommand("insert into reparatur values (" + id + ", " + matauf + ", to_date('"+ date + "','dd.mm.yyyy'), '" + tbSonstigeInfos.Text + "', " + mid + ")");
 
                 //MessageBox.Show(id.ToString());
                 db.ExecuteCommand("update schaden set status = 'behoben' where sid like " + sch.SchadenID);
-                this.Close();
+                
                 db.Close();
+                this.Close();
 
             }
             catch (Exception ex)
