@@ -59,7 +59,6 @@
     <Compile Include="AlleSchaeden.xaml.cs">
       <DependentUpon>AlleSchaeden.xaml</DependentUpon>
     </Compile>
-    <Compile Include="IDGenerator.cs" />
     <Compile Include="Schaden.cs" />
     <Page Include="AlleSchaeden.xaml">
       <SubType>Designer</SubType>

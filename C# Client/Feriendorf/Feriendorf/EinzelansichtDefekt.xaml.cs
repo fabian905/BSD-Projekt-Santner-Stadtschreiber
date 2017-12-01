@@ -84,18 +84,49 @@ namespace Feriendorf
             try
             {
                 db.Connect();
-                db.ExecuteCommand("update schaden set status = 'behoben' where sid like " + sch.SchadenID);
-               // db.ExecuteCommand("insert into reparatur values (" + IDGenerator.nextId + ", '" + tbMaterialaufwand.Text + "', '"+DateTime.Now+"', '"+tbSonstigeInfos.Text+"', '" + cbTechniker.SelectedItem.ToString()+"')");
+        
+                OleDbDataReader r = db.ExecuteCommand("select count(*) from reparatur");
+                int id = 0;
+                while (r.Read())
+                {
+                    id = Convert.ToInt32(r[0].ToString());
+                    
+                }
+                id++;
+       
+                string name = cbTechniker.SelectedItem.ToString();
+                //MessageBox.Show(id.ToString());
+                //MessageBox.Show(name);
+                string[] y = name.Split(' ');
+                //MessageBox.Show(y[0].ToString());
+                //MessageBox.Show(y[1].ToString());
 
-                db.Close();
+                r = db.ExecuteCommand("select mid from mitarbeiter where vorname like '"+y[0].ToString()+ "' and nachname like '" + y[1].ToString()+"'");
+                int mid = 0;
+                //MessageBox.Show(mid.ToString());
+                while (r.Read())
+                {
+                    mid = Convert.ToInt32(r[0].ToString());
+                }
+                //MessageBox.Show(mid.ToString());
+                int matauf = Convert.ToInt32(tbMaterialaufwand.Text);
+           
+                //db.ExecuteCommand("insert into reparatur values (3, 12, '1/1/2041', 'sonstiges', 1)");
+                db.ExecuteCommand("insert into reparatur values (" + id + ", " + matauf + ", '1/1/2345', '" + tbSonstigeInfos.Text + "', " + mid + ")");
+
+                //MessageBox.Show(id.ToString());
+                db.ExecuteCommand("update schaden set status = 'behoben' where sid like " + sch.SchadenID);
                 this.Close();
+                db.Close();
+
             }
             catch (Exception ex)
             {
-                db.Close();
                 MessageBox.Show(ex.Message);
+                db.Close();
             }
         }
+
         private void bttn_InArbeit_Click(object sender, RoutedEventArgs e)
         {
             try
