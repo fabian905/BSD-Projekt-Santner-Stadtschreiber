@@ -1,0 +1,3 @@
+Anpassung der Datenbank (bei Tabelle Mitarbeiter Benutzername, Passwort hinzugefügt) um in weiterer Folge das einloggen zu ermöglichen
+Befassen mit NodeJs Server und der Verbindung von diesem mit Oracle Datenbank
+Ausbesserungen im C# Client
