@@ -90,32 +90,21 @@ namespace Feriendorf
                 while (r.Read())
                 {
                     id = Convert.ToInt32(r[0].ToString());
-                    
                 }
                 id++;
        
                 string name = cbTechniker.SelectedItem.ToString();
-                //MessageBox.Show(id.ToString());
-                //MessageBox.Show(name);
                 string[] y = name.Split(' ');
-                //MessageBox.Show(y[0].ToString());
-                //MessageBox.Show(y[1].ToString());
 
                 r = db.ExecuteCommand("select mid from mitarbeiter where vorname like '"+y[0].ToString()+ "' and nachname like '" + y[1].ToString()+"'");
                 int mid = 0;
-                //MessageBox.Show(mid.ToString());
                 while (r.Read())
                 {
                     mid = Convert.ToInt32(r[0].ToString());
                 }
-                //MessageBox.Show(mid.ToString());
-                int matauf = Convert.ToInt32(tbMaterialaufwand.Text);
-
-                string date = string.Format(DateTime.Now.Day.ToString()+"."+ DateTime.Now.Month.ToString()+"."+DateTime.Now.Year.ToString());
-
-                db.ExecuteCommand("insert into reparatur values (" + id + ", " + matauf + ", to_date('"+ date + "','dd.mm.yyyy'), '" + tbSonstigeInfos.Text + "', " + mid + ")");
-
-                //MessageBox.Show(id.ToString());
+               
+                string date = string.Format(DateTime.Now.Day.ToString()+"."+ DateTime.Now.Month.ToString()+"."+DateTime.Now.Year.ToString()+" "+DateTime.Now.Hour+" "+DateTime.Now.Minute.ToString()+":"+DateTime.Now.Second.ToString());
+                db.ExecuteCommand("insert into reparatur values (" + id + ", " + Convert.ToInt32(tbMaterialaufwand.Text) + ", to_date('"+ date + "','DD.MM.YY HH:MI:SS'), '" + tbSonstigeInfos.Text + "', " + mid + ")");
                 db.ExecuteCommand("update schaden set status = 'behoben' where sid like " + sch.SchadenID);
                 
                 db.Close();

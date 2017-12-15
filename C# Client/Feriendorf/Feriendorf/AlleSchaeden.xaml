@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Feriendorf"
         mc:Ignorable="d"
-        Title="AlleSchaeden" Height="435.767" Width="676.643">
+        Title="AlleSchaeden" Height="435.767" Width="681.443">
     <Grid>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Height="314" Width="631" >
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Height="314" Width="631" Background="White" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="SchadenID" Binding="{Binding SchadenID}" Width="*"/>
                 <DataGridTextColumn Header="Bezeichnung" Binding="{Binding Bezeichnung}" Width="*"/>
@@ -17,8 +17,8 @@
                 <DataGridTextColumn Header="Haus" Binding="{Binding HausID}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Label x:Name="label" Content="Übersicht Alle Schäden" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="302" FontWeight="Bold" FontSize="20"/>
-        <Button x:Name="bttnClose" Content="Close" HorizontalAlignment="Left" Margin="544,21,0,0" VerticalAlignment="Top" Width="92" Height="21" Click="bttnClose_Click"/>
+        <Label x:Name="label" Content="Übersicht: Alle Schäden" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="302" FontWeight="Bold" FontSize="20"/>
+        <Button x:Name="bttnClose" Content="Schließen" HorizontalAlignment="Left" Margin="549,21,0,0" VerticalAlignment="Top" Width="92" Height="21" Click="bttnClose_Click"/>
 
     </Grid>
 </Window>

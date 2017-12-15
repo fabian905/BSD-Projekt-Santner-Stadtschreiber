@@ -56,10 +56,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AlleReparaturen.xaml.cs">
+      <DependentUpon>AlleReparaturen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AlleSchaeden.xaml.cs">
       <DependentUpon>AlleSchaeden.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Reparatur.cs" />
     <Compile Include="Schaden.cs" />
+    <Page Include="AlleReparaturen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AlleSchaeden.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -308,5 +308,11 @@ namespace Feriendorf
             AlleSchaeden a = new AlleSchaeden();
             a.Show();
         }
+
+        private void bttnAlleReparaturen_Click(object sender, RoutedEventArgs e)
+        {
+            AlleReparaturen ar = new AlleReparaturen();
+            ar.Show();
+        }
     }
 }

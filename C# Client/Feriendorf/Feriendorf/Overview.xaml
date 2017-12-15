@@ -5,20 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Feriendorf"
         mc:Ignorable="d"
-        Title="Overview" Height="550.2" Width="981">
-    <Grid Height="562" Margin="0,0,0.4,-0.4" VerticalAlignment="Top">
-        <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="401" Margin="10,73,0,0" VerticalAlignment="Top" Width="551" Background="#FFFFF0F0">
+        Title="Overview" Height="580.6" Width="981">
+    <Grid Height="550" Margin="0,0,0.4,0" VerticalAlignment="Top">
+        <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="438" Margin="16,74,0,0" VerticalAlignment="Top" Width="551" Background="#FFFFF0F0">
             <Canvas.LayoutTransform>
                 <ScaleTransform ScaleX="1" ScaleY="-1" CenterX=".5" CenterY=".5" />
             </Canvas.LayoutTransform>
         </Canvas>
-        <ListBox x:Name="lbAlleDefekte" HorizontalAlignment="Left" Height="360" Margin="583,73,0,0" VerticalAlignment="Top" Width="163" MouseDoubleClick="lbAlleDefekte_MouseDoubleClick" SelectionChanged="lbAlleDefekte_SelectionChanged"/>
-        <Button x:Name="bttnClose" Content="Logout" HorizontalAlignment="Left" Margin="583,479,0,0" VerticalAlignment="Top" Width="163" Height="23" Click="bttnClose_Click"/>
+        <ListBox x:Name="lbAlleDefekte" HorizontalAlignment="Left" Height="383" Margin="583,73,0,0" VerticalAlignment="Top" Width="163" MouseDoubleClick="lbAlleDefekte_MouseDoubleClick" SelectionChanged="lbAlleDefekte_SelectionChanged"/>
+        <Button x:Name="bttnClose" Content="Logout" HorizontalAlignment="Left" Margin="583,461,0,0" VerticalAlignment="Top" Width="339" Height="23" Click="bttnClose_Click"/>
         <Label x:Name="label" Content="Neue Schäden:" HorizontalAlignment="Left" Margin="583,36,0,0" VerticalAlignment="Top" Width="163" FontWeight="Bold" FontSize="18"/>
         <Label x:Name="label1" Content="Plan" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Width="551"/>
-        <ListBox x:Name="lbInArbeit" HorizontalAlignment="Left" Height="360" Margin="759,73,0,0" VerticalAlignment="Top" Width="163" MouseDoubleClick="lbInArbeit_MouseDoubleClick" SelectionChanged="lbInArbeit_SelectionChanged"/>
+        <ListBox x:Name="lbInArbeit" HorizontalAlignment="Left" Height="383" Margin="759,73,0,0" VerticalAlignment="Top" Width="163" MouseDoubleClick="lbInArbeit_MouseDoubleClick" SelectionChanged="lbInArbeit_SelectionChanged"/>
         <Label x:Name="label2" Content="In Arbeit:" HorizontalAlignment="Left" Margin="759,36,0,0" VerticalAlignment="Top" Width="177" FontSize="18" FontWeight="Bold"/>
-        <Button x:Name="bttnAlleSchaeden" Content="Übersicht Alle Schäden" HorizontalAlignment="Left" Margin="759,479,0,0" VerticalAlignment="Top" Width="163" Height="23" Click="bttnAlleSchaeden_Click"/>
+        <Button x:Name="bttnAlleSchaeden" Content="Übersicht Alle Schäden" HorizontalAlignment="Left" Margin="583,489,0,0" VerticalAlignment="Top" Width="168" Height="23" Click="bttnAlleSchaeden_Click"/>
+        <Button x:Name="bttnAlleReparaturen" Content="Übersicht alle Reparaturen" HorizontalAlignment="Left" Margin="756,489,0,0" VerticalAlignment="Top" Width="166" Height="23" Click="bttnAlleReparaturen_Click"/>
 
     </Grid>
 </Window>

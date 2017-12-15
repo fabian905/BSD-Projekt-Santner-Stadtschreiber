@@ -1,0 +1,23 @@
+﻿<Window x:Class="Feriendorf.AlleReparaturen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Feriendorf"
+        mc:Ignorable="d"
+        Title="AlleReparaturen" Height="419.675" Width="642.921">
+    <Grid>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Height="284" Width="588" Background="White">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ReparaturID" Binding="{Binding ReparaturID}" Width="*"/>
+                <DataGridTextColumn Header="Materialaufwand" Binding="{Binding Materialaufwand}" Width="*"/>
+                <DataGridTextColumn Header="Repariert" Binding="{Binding Repariert}" Width="*"/>
+                <DataGridTextColumn Header="Notiz" Binding="{Binding Notiz}" Width="*"/>
+                <DataGridTextColumn Header="Beheber" Binding="{Binding Beheber}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="bttnClose" Content="Schließen" HorizontalAlignment="Left" Margin="505,20,0,0" VerticalAlignment="Top" Width="93" Click="bttnClose_Click"/>
+        <Label x:Name="label" Content="Übersicht: Alle Reparaturen" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="302" FontWeight="Bold" FontSize="20"/>
+
+    </Grid>
+</Window>
