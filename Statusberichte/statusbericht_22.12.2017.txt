@@ -1,0 +1,2 @@
+Recherche bzgl. der Möglichkeiten, Google Maps in den WPF Client einzubinden
+Auswerten eines im Internet gefundenen C# Projektes zum obigen Thema (https://www.codeproject.com/Articles/316215/Google-Maps-in-WPF-with-WebBrowser-and-Google-Maps)
