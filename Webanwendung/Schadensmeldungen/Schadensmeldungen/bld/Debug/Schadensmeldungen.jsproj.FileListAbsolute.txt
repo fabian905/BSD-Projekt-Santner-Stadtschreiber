@@ -1,0 +1,17 @@
+C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\bin\Debug\ReverseMap\resources.pri
+C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\bin\Debug\AppxManifest.xml
+C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\bin\Debug\Schadensmeldungen.build.appxrecipe
+C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\bld\Debug\Schadensmeldungen.jsproj.CoreCompileInputs.cache
+C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\bld\Debug\ResourceHandlingTask.state
+C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\bld\Debug\priconfig.xml
+C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\bld\Debug\priconfig.xml.intermediate
+C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\bld\Debug\layout.resfiles
+C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\bld\Debug\layout.resfiles.intermediate
+C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\bld\Debug\resources.resfiles
+C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\bld\Debug\resources.resfiles.intermediate
+C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\bld\Debug\pri.resfiles
+C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\bld\Debug\pri.resfiles.intermediate
+C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\bld\Debug\qualifiers.txt
+C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\bld\Debug\qualifiers.txt.intermediate
+C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\bld\Debug\ProjectArchitectures.txt
