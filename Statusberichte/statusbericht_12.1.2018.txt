@@ -1,0 +1,7 @@
+Statusbericht 12.1.2018
+
+Überlegung wegen Konzeptänderung:
+MongoDB, NodeJS und Webanwendung um Plattformunabhängig zu sein
+
+MongoDB heruntergeladen und versucht zu installieren, 
+Webanwendung mit Google Maps Karte angefangen
