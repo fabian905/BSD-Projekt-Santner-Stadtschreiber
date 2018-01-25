@@ -1,1 +1,1 @@
-C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\Schadensmeldungen.jsproj;neutral
+C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Github\BSD-Projekt-Santner-Stadtschreiber\Webanwendung\Schadensmeldungen\Schadensmeldungen\Schadensmeldungen.jsproj;neutral

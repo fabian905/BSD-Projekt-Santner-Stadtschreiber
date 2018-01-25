@@ -18,6 +18,6 @@ C:\Program Files (x86)\Windows Kits\10\References\10.0.16299.0\Windows.Foundatio
 C:\Program Files (x86)\Windows Kits\10\References\10.0.16299.0\Windows.Devices.Printers.PrintersContract\1.0.0.0\Windows.Devices.Printers.PrintersContract.winmd
 -emitAnyForUnresolvedTypes
 -outFilePath
-c:\users\fabian\documents\mega\schule\5ahifs\bsd\schadensmeldungen\schadensmeldungen\bld\debug\winrtrefs\winrtrefs-temp.d.ts
+c:\users\fabian\documents\mega\schule\5ahifs\bsd\github\bsd-projekt-santner-stadtschreiber\webanwendung\schadensmeldungen\schadensmeldungen\bld\debug\winrtrefs\winrtrefs-temp.d.ts
 -emitDocumentation
 -suppressWarningsForUnresolvedWindowsTypes

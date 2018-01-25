@@ -58,6 +58,7 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="css\signin.css" />
     <Content Include="help.html" />
     <Content Include="index.html" />
     <Content Include="images\LockScreenLogo.scale-200.png" />

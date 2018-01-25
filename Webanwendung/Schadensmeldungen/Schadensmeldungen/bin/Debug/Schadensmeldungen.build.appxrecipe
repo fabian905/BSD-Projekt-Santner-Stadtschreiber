@@ -10,58 +10,64 @@
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>51aa5696-6920-4e5b-9396-9b962a05cbeb</PackageIdentityName>
     <PackageIdentityPublisher>CN=Fabian</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\bld\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Github\BSD-Projekt-Santner-Stadtschreiber\Webanwendung\Schadensmeldungen\Schadensmeldungen\bld\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath></WindowsSdkPath>
-    <LayoutDir>C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\bin\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Github\BSD-Projekt-Santner-Stadtschreiber\Webanwendung\Schadensmeldungen\Schadensmeldungen\bin\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Github\BSD-Projekt-Santner-Stadtschreiber\Webanwendung\Schadensmeldungen\Schadensmeldungen\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\index.html">
+    <AppxPackagedFile Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Github\BSD-Projekt-Santner-Stadtschreiber\Webanwendung\Schadensmeldungen\Schadensmeldungen\help.html">
+      <PackagePath>help.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Github\BSD-Projekt-Santner-Stadtschreiber\Webanwendung\Schadensmeldungen\Schadensmeldungen\index.html">
       <PackagePath>index.html</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\images\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Github\BSD-Projekt-Santner-Stadtschreiber\Webanwendung\Schadensmeldungen\Schadensmeldungen\overview.html">
+      <PackagePath>overview.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Github\BSD-Projekt-Santner-Stadtschreiber\Webanwendung\Schadensmeldungen\Schadensmeldungen\images\LockScreenLogo.scale-200.png">
       <PackagePath>images\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\images\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Github\BSD-Projekt-Santner-Stadtschreiber\Webanwendung\Schadensmeldungen\Schadensmeldungen\images\SplashScreen.scale-200.png">
       <PackagePath>images\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\images\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Github\BSD-Projekt-Santner-Stadtschreiber\Webanwendung\Schadensmeldungen\Schadensmeldungen\images\Square150x150Logo.scale-200.png">
       <PackagePath>images\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\images\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Github\BSD-Projekt-Santner-Stadtschreiber\Webanwendung\Schadensmeldungen\Schadensmeldungen\images\Square44x44Logo.scale-200.png">
       <PackagePath>images\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\images\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Github\BSD-Projekt-Santner-Stadtschreiber\Webanwendung\Schadensmeldungen\Schadensmeldungen\images\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>images\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\images\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Github\BSD-Projekt-Santner-Stadtschreiber\Webanwendung\Schadensmeldungen\Schadensmeldungen\images\StoreLogo.png">
       <PackagePath>images\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\images\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Github\BSD-Projekt-Santner-Stadtschreiber\Webanwendung\Schadensmeldungen\Schadensmeldungen\images\Wide310x150Logo.scale-200.png">
       <PackagePath>images\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\js\main.js">
+    <AppxPackagedFile Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Github\BSD-Projekt-Santner-Stadtschreiber\Webanwendung\Schadensmeldungen\Schadensmeldungen\js\main.js">
       <PackagePath>js\main.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\css\default.css">
+    <AppxPackagedFile Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Github\BSD-Projekt-Santner-Stadtschreiber\Webanwendung\Schadensmeldungen\Schadensmeldungen\css\default.css">
       <PackagePath>css\default.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Schadensmeldungen\Schadensmeldungen\bin\Debug\ReverseMap\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Fabian\Documents\Mega\Schule\5AHIFS\BSD\Github\BSD-Projekt-Santner-Stadtschreiber\Webanwendung\Schadensmeldungen\Schadensmeldungen\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
