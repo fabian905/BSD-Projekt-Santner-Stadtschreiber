@@ -1,0 +1,3 @@
+
+- Android app weitergearbeitet (Obefläche fertig) 
+- Webservice weitergearbeitet
